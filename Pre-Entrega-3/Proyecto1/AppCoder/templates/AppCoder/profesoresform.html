@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %}Profesor Form{% endblock title %}
+
+{% block content %}
+    <h1 class="text-bg-info">Profesores</h1>
+    <h1 class="text-center">Profesor Form</h1>
+    <div class="container mt-2">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form action="" method="post">
+                    {% csrf_token %}
+                    {{ form.non_field_errors }}
+                    <table>
+                        <tr>
+                            <th>{{ form.nombre.label_tag }}</th>
+                            <td>{{ form.nombre }}</td>
+                        </tr>
+                        <tr>
+                            <th>{{ form.apellido.label_tag }}</th>
+                            <td>{{ form.apellido }}</td>
+                        </tr>
+                        <tr>
+                            <th>{{ form.email.label_tag }}</th>
+                            <td>{{ form.email }}</td>
+                        </tr>
+                        <tr>
+                            <th>{{ form.materia.label_tag }}</th>
+                            <td>{{ form.materia }}</td>
+                        </tr>
+                    </table>
+                    <input type="submit" value="Enviar">
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+
+  

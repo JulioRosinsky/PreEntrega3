@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}Entregables{% endblock title %}
+
+{% block content %}
+<div class="container px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="col-md-10 col-lg-8 col-xl-7">
+            <h1>Entregables</h1>
+            <p>Bienvenido a la página de entregables.</p>
+            <!-- Agrega contenido específico de la página de entregables aquí. -->
+            <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'entregablesForm' %}">Formulario para validar tus entregables</a></li>
+        </div>
+    </div>
+</div>
+{% endblock %}

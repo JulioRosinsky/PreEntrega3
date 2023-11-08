@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}Entregables Form{% endblock title %}
+
+{% block content %}
+    <h1 class="text-bg-info">Entregables</h1>
+    <h1 class="text-center">Entregables Form</h1>
+    <div class="container mt-2">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form action="" method="post">
+                    {% csrf_token %}
+                    {{ form.non_field_errors }}
+                    <table>
+                        <tr>
+                            <th>{{ form.nombre.label_tag }}</th>
+                            <td>{{ form.nombre }}</td>
+                        </tr>
+                        <tr>
+                            <th>{{ form.fecha_de_entrega.label_tag }}</th>
+                            <td>{{ form.fecha_de_entrega }}</td>
+                        </tr>
+                        <tr>
+                            <th>{{ form.materia.label_tag }}</th>
+                            <td>{{ form.materia }}</td>
+                        </tr>
+                        <tr>
+                            <th>{{ form.entregado.label_tag }}</th>
+                            <td>{{ form.entregado }}</td>
+                        </tr>
+                    </table>
+                    <input type="submit" value="Enviar">
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

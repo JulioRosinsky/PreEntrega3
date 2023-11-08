@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}Estudiantes{% endblock title %}
+
+{% block content %}
+<!-- Contenido específico de la página de estudiantes -->
+<div class="container px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="col-md-10 col-lg-8 col-xl-7">
+            <!-- Contenido de la página de estudiantes -->
+            <h1>Estudiantes</h1>
+            <p>Bienvenido a la página de estudiantes.</p>
+            <!-- Puedes agregar más contenido específico de la página aquí. -->
+            <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'estudiantesForm' %}">Formulario de estudiantes</a></li>
+        </div>
+    </div>
+</div>
+{% endblock %}
