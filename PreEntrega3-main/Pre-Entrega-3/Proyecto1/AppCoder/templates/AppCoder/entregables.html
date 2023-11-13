@@ -1,0 +1,16 @@
+{% extends 'AppCoder/index.html'%}
+
+{% block title %}Entregables{% endblock title %}
+
+{% block content %}
+
+<div class="container px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="col-md-10 col-lg-8 col-xl-7">
+          <p><center><h1><strong>Entregables</strong></h1></center></p>
+          <p><center><h3>Bienvenido a la página de entregables</h3></center></p>
+          <center><li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'tareasform' %}"><h5>Formulario para validar tus entregables</h5></a></li></center>
+        </div>
+    </div>
+</div>
+{%endblock%}

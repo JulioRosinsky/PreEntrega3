@@ -1,0 +1,22 @@
+{% extends 'AppCoder/index.html' %}
+
+{% block title %}Resultados de la búsqueda{% endblock title %}
+
+{% block content %}
+  <h1>Resultados de la búsqueda</h1>
+  {% if profesor %}
+    <h2>Información del Profesor</h2>
+    <p>Nombre: {{ profesor.nombre }}</p>
+    <p>Apellido: {{ profesor.apellido }}</p>
+  {% endif %}
+
+  {% if estudiante %}
+    <h2>Información del Estudiante</h2>
+    <p>Nombre: {{ estudiante.nombre }}</p>
+    <p>Apellido: {{ estudiante.apellido }}</p>
+  {% endif %}
+
+  {% if not profesor and not estudiante %}
+    <p>No se encontraron resultados</p>
+  {% endif %}
+{% endblock content %}

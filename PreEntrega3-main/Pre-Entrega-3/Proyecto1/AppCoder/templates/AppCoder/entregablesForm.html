@@ -1,0 +1,15 @@
+{% extends 'AppCoder/index.html' %}
+
+{% block titulo %}<center><h1><strong>Entregables</strong></h1></center>{% endblock %}
+
+{% block subtitulo %}<center><h3><strong>Formulario de tareas</strong></h3></center>{% endblock subtitulo %}
+
+{% block content %}
+
+<form method="post" action="{% url 'entregables'%}" > 
+    {% csrf_token %}
+    <p><center>{{form}}</center></p>
+
+<center><button type="submit" id= "Enviar">Enviar</button></center>
+
+{% endblock content %}  

@@ -1,0 +1,14 @@
+{% extends 'AppCoder/index.html'%}
+
+{% block title %}<center><h1><strong>Estudiantes</strong></h1></center>{% endblock title %}
+
+{% block subheading %}<center><h3><strong>Formulario de estudiantes</strong></h3></center>{% endblock subheading %}
+
+{% block content %}
+<form method="post"> 
+    {% csrf_token %}
+    <p><center>{{form}}</center></p>
+
+<center><button type="submit" id= "Enviar">Enviar</button></center>
+
+{% endblock content %}  
